@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import customers from '../../shared/data/data';
 
 @Component({
   selector: 'app-customerlist',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customerlist.component.scss']
 })
 export class CustomerlistComponent implements OnInit {
+
+  customerList: Array<any> = customers;
 
   constructor() { }
 
