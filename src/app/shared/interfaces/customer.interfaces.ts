@@ -11,4 +11,4 @@ interface Customer {
   address: string;
  }
 
- export default Customer;
+export default Customer;

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './commons/home/home.component';
 import { CustomerlistComponent } from './customer/customerlist/customerlist.component';
-import { NotfoundComponent } from './commons/notfound/notfound.component';
 import { CustomerdataComponent } from './customer/customerdata/customerdata.component';
+import { NotfoundComponent } from './commons/notfound/notfound.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
     component: CustomerlistComponent
   },
   {
-    path: 'customer_detail/:id',
+    path: 'customer/:id',
     component: CustomerdataComponent
   },
   {

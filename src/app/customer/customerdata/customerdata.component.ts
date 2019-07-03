@@ -13,7 +13,8 @@ export class CustomerdataComponent implements OnInit {
 
   public identifier: any;
   public result: any;
-  //result: object = {};
+
+  public customers: Array<any>;
 
   public selectedCustomer: {
     _id: string,
@@ -29,25 +30,26 @@ export class CustomerdataComponent implements OnInit {
   };
 
   constructor(private route: ActivatedRoute) {
-
+    this.customers = customers;
   }
 
   ngOnInit() {
-    this.identifier = this.route.snapshot.params['id'];
+    //this.identifier = this.route.snapshot.params['id'];
 
-    this.selectedCustomer = customers.find(e => { return e.index == this.identifier; });
+    this.route.params.subscribe(miParams => {
+      this.identifier = miParams['id'];
+    });
 
-    //this.route.params.subscribe(miParams => { this.id = miParams.id; } );
+    if (this.customers[this.identifier] === undefined) {
+      this.identifier = '0';
+    } else {
+      /*
+      this.selectedCustomer = customers.find(e => {
+        return e.index == this.identifier;
+      });*/
 
-    // this.result = this.customerList.find(customer => {
-    //   return customer._id === this.identifier;
-    // });
-
-    // if (this.selectedCustomer[this.identifier] === undefined) {
-    //   this.identifier = '0';
-    // } else {
-    //   this.result = this.selectedCustomer[this.identifier];
-    // }
+      this.selectedCustomer = this.customers[this.identifier];
+    }
 
   }
 

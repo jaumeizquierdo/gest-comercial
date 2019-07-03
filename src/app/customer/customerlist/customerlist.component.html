@@ -1,9 +1,9 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-md-12">
-        <ul>
-          <li *ngFor="let customer of customerList" class="mb-2">
-            <a routerLink='../customer_detail/{{ customer.index }}'>{{ customer.name }}</a>
+        <ul class="list-group">
+          <li *ngFor='let customer of customers; let par = even; let impar = odd;' [ngClass] = "{ bgList1: par, 'list-group-item': true }">
+            <a routerLink='../customer/{{customer.index}}'>{{customer.name}}</a>
           </li>
         </ul>
     </div>

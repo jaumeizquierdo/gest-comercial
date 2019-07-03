@@ -1,18 +1,6 @@
-import Customer from '../interfaces/customer.interface';
+import Customer from '../interfaces/customer.interfaces';
 
 const customers: Array<Customer> = [
-  {
-    _id: '5d1b29a4d179a80b145397bf',
-    index: 0,
-    guid: '293cb242-12a6-4232-9735-9f1b962ded87',
-    age: 34,
-    name: 'Holly Crane',
-    gender: 'female',
-    company: 'CORPULSE',
-    email: 'hollycrane@corpulse.com',
-    phone: '+1 (889) 507-3813',
-    address: '379 Garfield Place, Reinerton, Alabama, 6472'
-  },
   {
     _id: '5d1b29a47e936928b8652515',
     index: 1,
@@ -120,7 +108,19 @@ const customers: Array<Customer> = [
     email: 'mayvincent@equicom.com',
     phone: '+1 (828) 441-2409',
     address: '926 Bevy Court, Bath, Delaware, 5704'
+  },
+  {
+    _id: '5d1b29a4e20272654069c8ea',
+    index: 10,
+    guid: '26b94b4c-3a3e-4fae-8540-e36dddc342d2',
+    age: 23,
+    name: 'May Vincent',
+    gender: 'female',
+    company: 'EQUICOM',
+    email: 'mayvincent@equicom.com',
+    phone: '+1 (828) 441-2409',
+    address: '926 Bevy Court, Bath, Delaware, 5704'
   }
-]
+];
 
 export default customers;
